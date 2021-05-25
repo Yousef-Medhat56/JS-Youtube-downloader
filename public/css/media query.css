@@ -1,0 +1,47 @@
+@media screen and (max-width: 770px) and (min-width: 425px) {
+    nav h2 {
+        font-size: 1.3em;
+    }
+    form {
+        line-height: 30px;
+    }
+    form label h3 {
+        font-size: 1.2em;
+    }
+    form label h4 {
+        font-size: 0.8em;
+    }
+    #input-video-url {
+        margin-top: 4vh;
+        width: 90%;
+    }
+    #input-video-url input {
+        padding: 8px 12px;
+        box-shadow: 3px 8px 25px #000
+    }
+    #input-video-url input:hover {
+        box-shadow: 8px 17px 25px #000
+    }
+}
+
+@media screen and (max-width: 425px) {
+    nav h2 {
+        font-size: 1.1em;
+    }
+    form {
+        line-height: 25px;
+    }
+    form label h3 {
+        font-size: 1em;
+    }
+    form label h4 {
+        font-size: 0.6em;
+    }
+    #input-video-url {
+        margin-top: 3vh;
+        width: 98%;
+    }
+    #input-video-url input {
+        padding: 5px 10px;
+    }
+}

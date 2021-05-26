@@ -1,0 +1,26 @@
+{
+    "name": "js-youtube-downloader",
+    "version": "1.0.0",
+    "description": "Download Youtube videos using NodeJS and Express",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Yousef-Medhat56/JS-Youtube-downloader.git"
+    },
+    "author": "Yousef Medhat",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Yousef-Medhat56/JS-Youtube-downloader/issues"
+    },
+    "homepage": "https://github.com/Yousef-Medhat56/JS-Youtube-downloader#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "ytdl-core": "^4.8.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}

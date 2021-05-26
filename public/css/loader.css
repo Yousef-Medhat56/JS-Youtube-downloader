@@ -1,0 +1,29 @@
+/*hide the loader until clicking the submit button*/
+
+#loader {
+    display: none;
+}
+
+
+/*loader styles*/
+
+#loader:before {
+    content: "";
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    border-top: 3px solid #fff;
+    margin: auto;
+    animation: spin 1s linear infinite
+}
+
+
+/*loader animation*/
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

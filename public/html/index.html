@@ -30,17 +30,21 @@
         <h2>YouTube Downloader <i class="fas fa-arrow-alt-circle-down"></i></h2>
     </nav>
 
-    <form action="get">
-        <label for="youtubeUrl">
+    <!--make input field for the youtube video link-->
+    <form id="video-url-form">
+        <label for="video-url-input">
                 <h3>Convert and download</h3>
                 <h4>any YouTube video in MP4, MP3 and webm</h4>
             </label>
         <div id="input-video-url">
-            <input type="text" name="youtubeUrl" id="youtubeUrl" placeholder="Enter video url">
-            <button type="submit">Convert</button>
+            <input type="text" id="video-url-input" placeholder="Enter video url">
+            <button id="video-url-btn">Convert</button>
         </div>
     </form>
 
 </body>
+<!--JavaScript-->
+<!--fetch video info-->
+<script src="../JavaScript/fetch APi.js"></script>
 
 </html>

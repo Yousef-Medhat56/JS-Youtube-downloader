@@ -20,6 +20,9 @@
 
     <!--Media queries-->
     <link rel="stylesheet" href="../CSS/media query.css">
+
+    <!--loader styles-->
+    <link rel="stylesheet" href="../CSS/loader.css">
     <title>YouTube Downloader</title>
 </head>
 
@@ -36,9 +39,11 @@
                 <h3>Convert and download</h3>
                 <h4>any YouTube video in MP4, MP3 and webm</h4>
             </label>
-        <div id="input-video-url">
+        <div id="video-url-div">
             <input type="text" id="video-url-input" placeholder="Enter video url">
-            <button id="video-url-btn">Convert</button>
+            <button id="video-url-btn"> Convert</button>
+            <!--add loader that will appear after clicking the button-->
+            <div id="loader"></div>
         </div>
     </form>
 
@@ -46,5 +51,7 @@
 <!--JavaScript-->
 <!--fetch video info-->
 <script src="../JavaScript/fetch APi.js"></script>
+<!--Add styles-->
+<script src="../JavaScript/styles.js"></script>
 
 </html>

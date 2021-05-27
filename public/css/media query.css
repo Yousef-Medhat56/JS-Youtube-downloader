@@ -33,6 +33,11 @@
         width: 15px;
         height: 15px;
     }
+    #error-message {
+        bottom: -30px;
+        left: 20px;
+        font-size: 0.7em;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -59,5 +64,10 @@
     #loader::before {
         width: 12px;
         height: 12px;
+    }
+    #error-message {
+        bottom: -25px;
+        left: 15px;
+        font-size: 0.6em;
     }
 }

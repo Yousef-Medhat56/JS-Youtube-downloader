@@ -3,6 +3,19 @@
         width: 20px;
         height: 20px;
     }
+    #back-side {
+        bottom: -2.5vh;
+    }
+    #video-title {
+        font-size: 1.1em;
+    }
+    #video-info {
+        line-height: 25px
+    }
+    #video-info h4,
+    #video-duration {
+        font-size: 0.9em;
+    }
 }
 
 @media screen and (max-width: 770px) and (min-width: 425px) {
@@ -18,15 +31,21 @@
     form label h4 {
         font-size: 0.8em;
     }
-    #video-url-div {
-        margin-top: 4vh;
+    #video-url-btn {
+        font-size: 12px
+    }
+    #flip-container {
+        padding-top: 4vh;
         width: 90%;
     }
-    #video-url-div input {
+    #back-side {
+        bottom: -2vh;
+    }
+    #flip-container input {
         padding: 8px 12px;
         box-shadow: 3px 8px 25px #000
     }
-    #video-url-div input:hover {
+    #flip-container input:hover {
         box-shadow: 8px 17px 25px #000
     }
     #loader::before {
@@ -34,8 +53,22 @@
         height: 15px;
     }
     #error-message {
-        bottom: -30px;
+        bottom: -40px;
         left: 20px;
+        font-size: 0.7em;
+    }
+    #video-info {
+        line-height: 20px
+    }
+    #thumbnail-container img {
+        width: 130px;
+        object-fit: contain;
+    }
+    #video-title {
+        font-size: 0.9em;
+    }
+    #video-info h4,
+    #video-duration {
         font-size: 0.7em;
     }
 }
@@ -53,21 +86,41 @@
     form label h4 {
         font-size: 0.6em;
     }
-    #video-url-div {
-        margin-top: 3vh;
-        width: 98%;
+    #flip-container {
+        padding-top: 3vh;
+        width: 95%;
     }
-    #video-url-div input {
+    #back-side {
+        bottom: -1.5vh;
+    }
+    #flip-container input {
         padding: 5px 10px;
         font-size: 10px;
+    }
+    #video-url-btn {
+        font-size: 10px
     }
     #loader::before {
         width: 12px;
         height: 12px;
     }
     #error-message {
-        bottom: -25px;
+        bottom: -30px;
         left: 15px;
         font-size: 0.6em;
+    }
+    #video-info {
+        line-height: 15px;
+    }
+    #video-title {
+        font-size: 0.7em;
+    }
+    #video-info h4,
+    #video-duration {
+        font-size: 0.5em;
+    }
+    #thumbnail-container img {
+        width: 100px;
+        object-fit: contain;
     }
 }

@@ -1,5 +1,5 @@
 //Get DOM elements
-const videoUrlForm = document.getElementById("video-url-form") //form tag
+
 const videoUrlInput = document.getElementById("video-url-input") //input video link field
 const videoUrlBtn = document.getElementById("video-url-btn") //submit button
 
@@ -16,7 +16,11 @@ const clickSubmitBtn = e => {
         //fetch video data
         fetch(`http://localhost:7777/getData/?videoUrl=${videoUrlInput.value}`)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => {
+                rotateSides() //rotate back side to contain the video details
+                modifyBackSide(data) //modify the back side styles and write video details in it
+                console.log(data)
+            })
             .catch(err => { //if there is an error
                 showErrorMsg("Please enter valid video url") //ask the user to enter the url again
                 ctrlLoaderDis("block", "none") //hide loader and show submit button again

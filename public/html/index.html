@@ -26,6 +26,9 @@
 
     <!--show video details-->
     <link rel="stylesheet" href="../CSS/video details.css">
+
+    <!--Video formats-->
+    <link rel="stylesheet" href="../CSS/video formats.css">
     <title>YouTube Downloader</title>
 </head>
 
@@ -60,7 +63,36 @@
         </div>
     </form>
 
+    <!--available formats for downloading-->
+    <section id="available-formats-container">
+
+        <!--download video and audio together-->
+        <section id="video-audio-formats">
+            <header>
+                <h3>Video and Audio</h3>
+            </header>
+
+        </section>
+
+        <!--download video only-->
+        <section id="video-only-formats">
+            <header>
+                <h3>Video only</h3>
+            </header>
+
+        </section>
+
+        <!--download audio only-->
+        <section id="audio-only-formats">
+            <header>
+                <h3>Audio only</h3>
+            </header>
+
+        </section>
+
+    </section>
 </body>
+
 <!--JavaScript-->
 <!--fetch video info-->
 <script src="../JavaScript/fetch APi.js"></script>
@@ -68,5 +100,7 @@
 <script src="../JavaScript/styles.js"></script>
 <!--show the video info to the user-->
 <script src="../JavaScript/show video info.js"></script>
+<!--show available formats for downloading-->
+<script src="../JavaScript/show available formats.js"></script>
 
 </html>

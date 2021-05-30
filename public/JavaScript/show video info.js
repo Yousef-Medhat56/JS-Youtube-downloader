@@ -42,22 +42,26 @@ const rotateSides = () => {
 
 //add new styles to the back side (video details container) after its rotation
 const modifyBackSide = (videoInfo) => {
-    backSide.addEventListener("transitionend", () => {
-        backSide.style.height = "150px" //increase back side height
-        backSide.style.marginBottom = "-100px" // add margin bottom
-        videoUrlForm.style.margin = "12vh 0" //decrease the form margin 
-        showVideoInfo(videoInfo) //show video details in the back side
-    })
+    setTimeout(() => { //wait until the backside rotate, then invoke the function
+            backSide.style.height = "150px" //increase back side height
+            backSide.style.marginBottom = "-100px" // add margin bottom
+            videoUrlForm.style.margin = "22vh 0 10vh" //decrease the form margin 
+            showVideoInfo(videoInfo) //show video details in the back side
+
+        }, 900) //0.9s = transition duration of the backside
 }
 
 //write the video details 
 const showVideoInfo = (videoInfo) => {
-    backSide.addEventListener("transitionend", () => {
-        //destructing the videoInfo Object
-        const { videoDetails: { thumbnails: [img], title, ownerChannelName, lengthSeconds, viewCount, uploadDate } } = videoInfo
+    setTimeout(() => {
+            /*wait the backside styles in (modifyBackSide) function, 
+                   then invoke the function (write the video details in the back side)*/
 
-        //write video info in the (back side) div
-        backSide.innerHTML = `<div id = "thumbnail-container"> <img src="${img.url}" alt="video thumbnail"></div>
+            //destructing the videoInfo Object
+            const { videoDetails: { thumbnails: [img], title, ownerChannelName, lengthSeconds, viewCount, uploadDate } } = videoInfo
+
+            //write video info in the (back side) div
+            backSide.innerHTML = `<div id = "thumbnail-container"> <img src="${img.url}" alt="video thumbnail"></div>
     <div id= "video-info">
     <h3 id= "video-title">${title}</h3>
     <h4 id = "channel-name">${ownerChannelName}</h4>
@@ -67,5 +71,15 @@ const showVideoInfo = (videoInfo) => {
     
     </div>
     </div>`
-    })
+
+
+            //increase height of the main formats container
+            formatsContainer.style.height = "160vh"
+
+            //show available formats for downloading
+            showAvailableFormats(vidAndAud, 0) //formats that have video and audio together
+            showAvailableFormats(vidOnly, 1) //formats that have video only
+            showAvailableFormats(audOnly, 2, addAudFormat) //formats that have audio only
+
+        }, 900) //0.9s = transition duration of the backside
 }

@@ -12,8 +12,7 @@
     #video-info {
         line-height: 25px
     }
-    #video-info h4,
-    #video-duration {
+    #video-info h4 {
         font-size: 0.9em;
     }
 }
@@ -67,8 +66,7 @@
     #video-title {
         font-size: 0.9em;
     }
-    #video-info h4,
-    #video-duration {
+    #video-info h4 {
         font-size: 0.7em;
     }
 }
@@ -115,12 +113,17 @@
     #video-title {
         font-size: 0.7em;
     }
-    #video-info h4,
-    #video-duration {
+    #video-info h4 {
         font-size: 0.5em;
     }
     #thumbnail-container img {
         width: 100px;
         object-fit: contain;
+    }
+    #available-formats-container header {
+        font-size: 1em;
+    }
+    #available-formats-container div h5 {
+        font-size: 0.6em;
     }
 }

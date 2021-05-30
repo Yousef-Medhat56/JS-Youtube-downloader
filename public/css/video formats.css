@@ -1,0 +1,103 @@
+/*available formats for downloading styles*/
+
+
+/*Formats container*/
+
+#available-formats-container {
+    height: 0;
+    width: 90%;
+    overflow: hidden;
+    margin: 30vh auto 0;
+    flex-direction: column;
+    transition: 1s ease;
+}
+
+#available-formats-container header {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+/*formats properties container*/
+
+.formats-properties {
+    width: 100%;
+    margin: 5vh 0 10vh;
+    display: grid;
+    grid-template-columns: 10% repeat(3, 1fr) 25%;
+    grid-template-rows: 1fr;
+    box-shadow: 1px 1px 15px rgba(157, 157, 157, 0.1);
+    border-radius: 5px;
+}
+
+
+/*video only formats properties container*/
+
+#video-only-formats .formats-properties {
+    height: 42vh;
+    overflow-y: scroll;
+}
+
+
+/*video only container | scroll bar*/
+
+#video-only-formats .formats-properties::-webkit-scrollbar {
+    width: 10px;
+}
+
+#video-only-formats .formats-properties::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+#video-only-formats .formats-properties::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(239, 239, 239, 0.1);
+}
+
+#video-only-formats .formats-properties div h5:first-child {
+    position: sticky;
+    top: 0;
+}
+
+
+/*odd rows background color*/
+
+#available-formats-container div h5:nth-child(odd) {
+    background-color: #1e1e1e;
+}
+
+
+/*even rows background color*/
+
+#available-formats-container div h5:nth-child(even) {
+    background-color: rgba(239, 239, 239, 0.1);
+}
+
+
+/*text styles*/
+
+#available-formats-container div h5 {
+    width: 100%;
+    text-align: center;
+    padding: 3vh 0
+}
+
+
+/*add border radius to the formats properties container*/
+
+.format-order h5:first-child {
+    border-top-left-radius: 5px;
+}
+
+.download-buttons h5:first-child {
+    border-top-right-radius: 5px;
+}
+
+.format-order h5:last-child {
+    border-bottom-left-radius: 5px;
+}
+
+.download-buttons h5:last-child {
+    border-bottom-right-radius: 5px;
+}

@@ -26,12 +26,15 @@ body {
 /*Navigation bar */
 
 nav {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--secondry-color);
+    z-index: 1;
 }
 
 nav h2 {
@@ -50,7 +53,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20vh 0;
+    margin: 30vh 0 20vh;
     line-height: 35px;
     transition: 0.8s ease;
 }

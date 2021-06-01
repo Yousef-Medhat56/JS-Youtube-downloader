@@ -1,17 +1,34 @@
 //Import modules
-const youtubeDl = require("ytdl-core")
 const express = require("express")
 const app = express()
 
+const contentDisposition = require('content-disposition')
+
+
 //import getVideoInfo function
 const getVideoInfo = require("./get video info")
+
+//import downloadVid function
+const downloadVid = require("./download video")
 
 //add port 
 const PORT = process.env.PORT || 7777
 app.listen(PORT)
 
 //hadle get request : get the video info
+
 app.get("/getData", (req, res) => {
-    const { videoUrl } = req.query //destructing (req.query) object
+    videoUrl = req.query.videoUrl //destructing (req.query) object
     getVideoInfo(videoUrl).then(data => res.send(data)) //get the video info by its URL then send it to the frontend
+})
+
+//hadle get request : download video
+app.get("/downloadVid", (req, res) => {
+    const { videoQuality, videoTitle, videoType } = req.query //destructing (req.query) object
+
+    //set header
+    res.setHeader('Content-Disposition', contentDisposition(`${videoTitle}.${videoType}`))
+    downloadVid(videoUrl, videoQuality, res) //download the video
+
+
 })

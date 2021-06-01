@@ -13,7 +13,7 @@ const clickSubmitBtn = e => {
     //if the input field isn't empty
     else {
         //fetch video data
-        fetch(`http://localhost:7777/getData/?videoUrl=${videoUrlInput.value}`)
+        fetch(`/getData/?videoUrl=${videoUrlInput.value}`)
             .then(response => response.json())
             .then(data => {
                 //reorder (available formats for downloading)array according to their quality 

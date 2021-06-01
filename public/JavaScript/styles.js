@@ -1,4 +1,5 @@
 //ADD STYLES WITH JavaScript
+//control loader appearance and showing error message
 //DOM elements
 const loaderContainer = document.getElementById("loader") //loader 
 const errorMsg = document.getElementById("error-message") //error message

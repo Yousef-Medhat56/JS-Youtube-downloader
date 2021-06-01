@@ -2,20 +2,27 @@
 const express = require("express")
 const app = express()
 
+const fs = require("fs")
+const path = require("path")
+
 const contentDisposition = require('content-disposition')
 
 
 //import getVideoInfo function
-const getVideoInfo = require("./get video info")
+const getVideoInfo = require("./Server/get video info")
 
 //import downloadVid function
-const downloadVid = require("./download video")
+const downloadVid = require("./Server/download video")
 
 //add port 
 const PORT = process.env.PORT || 7777
 app.listen(PORT)
 
-//hadle get request : get the video info
+/*app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "HTML", "index.html"))
+})*/
+app.use(express.static('public'))
+    //hadle get request : get the video info
 
 app.get("/getData", (req, res) => {
     videoUrl = req.query.videoUrl //destructing (req.query) object

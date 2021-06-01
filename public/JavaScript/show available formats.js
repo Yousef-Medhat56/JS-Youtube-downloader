@@ -85,7 +85,7 @@ const audioQualityObj = {
 
 
 //show data of available formats for downloading
-const showAvailableFormats = (formatsArr, index, addAudFormat = null) => {
+const showAvailableFormats = (formatsArr, index, videoTitle, addAudFormat = null) => {
     /*formatsArr : formats array from the API
     index: index of container(video and audio or video only or audio only
     addAudFormat : add audio format if the format has audio only )*/
@@ -99,9 +99,10 @@ const showAvailableFormats = (formatsArr, index, addAudFormat = null) => {
 
     const formatSize = document.querySelectorAll(".size") //size of format
 
+    const downloadBtns = document.querySelectorAll(".download-buttons")
     let videoOrder = 0 //start counting the video order
     for (arr of formatsArr) {
-        const { qualityLabel, container, contentLength, audioQuality } = arr //destructing the keys of each format in the formats array
+        const { qualityLabel, container, contentLength, audioQuality, itag } = arr //destructing the keys of each format in the formats array
         videoOrder++ //increase the vide order by 1
 
         formatOrder[index].innerHTML += `<h5>${videoOrder}</h5>` //write the format order
@@ -113,9 +114,17 @@ const showAvailableFormats = (formatsArr, index, addAudFormat = null) => {
         try {
             //if the format has audio only, the audio format will be written 
             formatType[index].innerHTML += `<h5>${addAudFormat(container)}</h5>`
+
+            //add download buttons with the required data for downloading:video quality,name , type
+            downloadBtns[index].innerHTML += `<div><button onclick='downloadVid(${itag},"${videoTitle}","${addAudFormat(container)}")'>
+            download</button></div>`
         } catch {
             //if the format has video, the video format will be written 
             formatType[index].innerHTML += `<h5>${container}</h5>`
+
+            //add download buttons with the required data for downloading:video quality,name , type
+            downloadBtns[index].innerHTML += `<div><button onclick='downloadVid(${itag},"${videoTitle}","${container}")'>
+            download</button></div>`
         }
 
         //write the format size

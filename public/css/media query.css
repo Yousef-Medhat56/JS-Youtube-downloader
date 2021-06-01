@@ -15,6 +15,10 @@
     #video-info h4 {
         font-size: 0.9em;
     }
+    .download-buttons button {
+        height: 45%;
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 770px) and (min-width: 425px) {
@@ -67,6 +71,14 @@
         font-size: 0.9em;
     }
     #video-info h4 {
+        font-size: 0.7em;
+    }
+    .download-buttons button {
+        width: 70%;
+        height: 50%;
+    }
+    #available-formats-container div h5,
+    .download-buttons button {
         font-size: 0.7em;
     }
 }
@@ -123,7 +135,12 @@
     #available-formats-container header {
         font-size: 1em;
     }
-    #available-formats-container div h5 {
+    .download-buttons button {
+        width: 80%;
+        height: 50%;
+    }
+    #available-formats-container div h5,
+    .download-buttons button {
         font-size: 0.6em;
     }
 }

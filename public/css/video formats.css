@@ -63,14 +63,16 @@
 
 /*odd rows background color*/
 
-#available-formats-container div h5:nth-child(odd) {
+#available-formats-container div h5:nth-child(odd),
+.download-buttons div:nth-child(odd) {
     background-color: #1e1e1e;
 }
 
 
 /*even rows background color*/
 
-#available-formats-container div h5:nth-child(even) {
+#available-formats-container div h5:nth-child(even),
+.download-buttons div:nth-child(even) {
     background-color: rgba(239, 239, 239, 0.1);
 }
 
@@ -80,11 +82,44 @@
 #available-formats-container div h5 {
     width: 100%;
     text-align: center;
-    padding: 3vh 0
+}
+
+#available-formats-container div h5:not(.download-buttons h5) {
+    padding: 3vh 0;
 }
 
 
-/*add border radius to the formats properties container*/
+/*download buttons container*/
+
+.download-buttons {
+    display: grid;
+}
+
+#available-formats-container .download-buttons h5,
+.download-buttons div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*download buttons*/
+
+.download-buttons button {
+    outline: none;
+    border: none;
+    background-color: #1a951a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.download-buttons button:hover {
+    transform: translateY(-3px);
+}
+
+
+/*add border radius to the formats properties*/
 
 .format-order h5:first-child {
     border-top-left-radius: 5px;
@@ -98,6 +133,6 @@
     border-bottom-left-radius: 5px;
 }
 
-.download-buttons h5:last-child {
+.download-buttons div:last-child {
     border-bottom-right-radius: 5px;
 }

@@ -77,9 +77,9 @@ const showVideoInfo = (videoInfo) => {
             formatsContainer.style.height = "160vh"
 
             //show available formats for downloading
-            showAvailableFormats(vidAndAud, 0) //formats that have video and audio together
-            showAvailableFormats(vidOnly, 1) //formats that have video only
-            showAvailableFormats(audOnly, 2, addAudFormat) //formats that have audio only
+            showAvailableFormats(vidAndAud, 0, title) //formats that have video and audio together
+            showAvailableFormats(vidOnly, 1, title) //formats that have video only
+            showAvailableFormats(audOnly, 2, title, addAudFormat) //formats that have audio only
 
         }, 900) //0.9s = transition duration of the backside
 }

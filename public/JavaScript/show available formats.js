@@ -116,14 +116,14 @@ const showAvailableFormats = (formatsArr, index, videoTitle, addAudFormat = null
             formatType[index].innerHTML += `<h5>${addAudFormat(container)}</h5>`
 
             //add download buttons with the required data for downloading:video quality,name , type
-            downloadBtns[index].innerHTML += `<div><button onclick='downloadVid(${itag},"${videoTitle}","${addAudFormat(container)}")'>
+            downloadBtns[index].innerHTML += `<div><button onclick='sendDownloadReq(${itag},"${videoTitle}","${addAudFormat(container)}")'>
             download</button></div>`
         } catch {
             //if the format has video, the video format will be written 
             formatType[index].innerHTML += `<h5>${container}</h5>`
 
             //add download buttons with the required data for downloading:video quality,name , type
-            downloadBtns[index].innerHTML += `<div><button onclick='downloadVid(${itag},"${videoTitle}","${container}")'>
+            downloadBtns[index].innerHTML += `<div><button onclick='sendDownloadReq(${itag},"${videoTitle}","${container}")'>
             download</button></div>`
         }
 

@@ -17,6 +17,7 @@
     },
     "homepage": "https://github.com/Yousef-Medhat56/JS-Youtube-downloader#readme",
     "dependencies": {
+        "content-disposition": "^0.5.3",
         "express": "^4.17.1",
         "ytdl-core": "^4.8.2"
     },

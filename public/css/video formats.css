@@ -84,8 +84,12 @@
     text-align: center;
 }
 
-#available-formats-container div h5:not(.download-buttons h5) {
+#available-formats-container div h5 {
     padding: 3vh 0;
+}
+
+#available-formats-container .download-buttons h5 {
+    padding: 0;
 }
 
 

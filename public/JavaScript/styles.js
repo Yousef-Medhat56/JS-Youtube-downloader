@@ -17,3 +17,8 @@ const showErrorMsg = (errMessage) => {
     errorMsg.style.display = "block" //show error message
     errorMsg.addEventListener("animationend", () => errorMsg.style.display = "none") //hide it again after finishing its animation
 }
+
+//control the height of videos only container
+const videoOnlyHeight = (videoOnlyArr) => { //if the number of available videos is equal to or less than 4
+    if (videoOnlyArr.length <= 4) document.querySelector("#video-only-formats .formats-properties").style.height = "fit-content"
+}

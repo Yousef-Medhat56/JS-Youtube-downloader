@@ -24,6 +24,8 @@ const clickSubmitBtn = e => {
                 vidOnly = filterVidOnly(data.formats) //video only formats
                 audOnly = filterAudOnly(data.formats) //audio only formats
 
+                //control the height of videos only container
+                videoOnlyHeight(vidOnly)
                 rotateSides() //rotate back side to contain the video details
                 modifyBackSide(data) //modify the back side styles and write video details in it
             })

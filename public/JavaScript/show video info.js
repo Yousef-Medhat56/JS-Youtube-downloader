@@ -77,9 +77,13 @@ const showVideoInfo = (videoInfo) => {
             formatsContainer.style.height = "160vh"
 
             //show available formats for downloading
-            showAvailableFormats(vidAndAud, 0, title) //formats that have video and audio together
-            showAvailableFormats(vidOnly, 1, title) //formats that have video only
-            showAvailableFormats(audOnly, 2, title, addAudFormat) //formats that have audio only
+
+            //replace quotes and backticks if they are found in the video title
+            const videoTitle = title.replace(/"/g, `/`).replace(/'/g, ` `).replace(/`/g, " ")
+
+            showAvailableFormats(vidAndAud, 0, `${videoTitle}`) //formats that have video and audio together
+            showAvailableFormats(vidOnly, 1, `${videoTitle}`) //formats that have video only
+            showAvailableFormats(audOnly, 2, `${videoTitle}`, addAudFormat) //formats that have audio only
 
         }, 900) //0.9s = transition duration of the backside
 }

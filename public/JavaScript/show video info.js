@@ -78,6 +78,7 @@ const showVideoInfo = (videoInfo) => {
             //increase height of the main formats container
             formatsContainer.style.height = "160vh"
 
+
             //show available formats for downloading
 
             //replace quotes and backticks if they are found in the video title
@@ -86,6 +87,9 @@ const showVideoInfo = (videoInfo) => {
             showAvailableFormats(vidAndAud, 0, `${videoTitle}`) //formats that have video and audio together
             showAvailableFormats(vidOnly, 1, `${videoTitle}`) //formats that have video only
             showAvailableFormats(audOnly, 2, `${videoTitle}`, addAudFormat) //formats that have audio only
-
+            showFooter() //show the footer after showing the available formats container
         }, 900) //0.9s = transition duration of the backside
 }
+
+//show the footer after showing the available formats container
+const showFooter = () => setTimeout(() => document.getElementById("footer").style.display = "grid", 900)

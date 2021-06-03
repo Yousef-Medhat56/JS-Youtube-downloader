@@ -27,3 +27,22 @@
         transform: rotate(360deg);
     }
 }
+
+
+/*reload page button*/
+
+#reload-btn {
+    background-color: var(--secondry-color);
+    position: absolute;
+    display: none;
+    border: none;
+    outline: none;
+    padding: 2vh 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.1);
+}

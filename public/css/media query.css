@@ -19,6 +19,13 @@
         height: 45%;
         width: 60%;
     }
+    #available-formats-container {
+        margin: 35vh auto 0;
+    }
+    #reload-btn {
+        font-size: 0.9em;
+        bottom: -28vh
+    }
 }
 
 @media screen and (max-width: 770px) and (min-width: 425px) {
@@ -77,9 +84,16 @@
         width: 70%;
         height: 50%;
     }
+    #available-formats-container {
+        margin: 33vh auto 0;
+    }
     #available-formats-container div h5,
     .download-buttons button {
         font-size: 0.7em;
+    }
+    #reload-btn {
+        font-size: 0.8em;
+        bottom: -26vh;
     }
 }
 
@@ -132,6 +146,9 @@
         width: 100px;
         object-fit: contain;
     }
+    #available-formats-container {
+        margin: 30vh auto 0;
+    }
     #available-formats-container header {
         font-size: 1em;
     }
@@ -142,5 +159,9 @@
     #available-formats-container div h5,
     .download-buttons button {
         font-size: 0.6em;
+    }
+    #reload-btn {
+        font-size: 0.6em;
+        bottom: -24vh;
     }
 }

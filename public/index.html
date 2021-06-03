@@ -35,15 +35,17 @@
 <body>
     <!--Nav bar-->
     <nav>
+        <!--reload the page after clicking the nav bar-->
+        <button onclick="location.reload()">
         <!--Logo-->
-        <h2>YouTube Downloader <i class="fas fa-arrow-alt-circle-down"></i></h2>
+        <h2>YouTube Downloader <i class="fas fa-arrow-alt-circle-down"></i></h2></button>
     </nav>
 
     <!--make input field for the youtube video link-->
     <form id="video-url-form">
         <label for="video-url-input">
                 <h3>Convert and download</h3>
-                <h4>any YouTube video in MP4, MP3 and webm</h4>
+                <h4>any YouTube video in MP4, MP3, webm and opus</h4>
         </label>
         <div id="flip-container">
             <!--the side that contains video details-->
@@ -54,13 +56,15 @@
                 <!--The error message that will appear for the user, if he entered wrong url-->
                 <h5 id="error-message"></h5>
 
-                <input type="text" id="video-url-input" placeholder="Enter video url">
+                <input type="text" id="video-url-input" placeholder="Enter video link">
                 <button type="submit" id="video-url-btn"> Convert</button>
                 <!--add loader that will appear after clicking the button-->
                 <div id="loader"></div>
             </div>
 
         </div>
+        <!--reload the page after clicking the button-->
+        <button onclick="location.reload()" type="button" id="reload-btn"><i class="fas fa-redo"></i> convert again</button>
     </form>
 
     <!--available formats for downloading-->

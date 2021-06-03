@@ -26,6 +26,12 @@
         font-size: 0.9em;
         bottom: -28vh
     }
+    footer span {
+        font-size: 0.7em;
+    }
+    #social-media i {
+        font-size: 1.7em;
+    }
 }
 
 @media screen and (max-width: 770px) and (min-width: 425px) {
@@ -95,6 +101,12 @@
         font-size: 0.8em;
         bottom: -26vh;
     }
+    footer span {
+        font-size: 0.6em;
+    }
+    #social-media i {
+        font-size: 1.6em;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -163,5 +175,11 @@
     #reload-btn {
         font-size: 0.6em;
         bottom: -24vh;
+    }
+    footer span {
+        font-size: 0.5em;
+    }
+    #social-media i {
+        font-size: 1.5em;
     }
 }

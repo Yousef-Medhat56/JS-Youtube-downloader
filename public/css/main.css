@@ -116,6 +116,7 @@ form label h4 {
     -moz-transform: perspective(2000px) rotateY(0deg);
     -ms-transform: perspective(2000px) rotateY(0deg);
     -o-transform: perspective(2000px) rotateY(0deg);
+    -webkit-backface-visibility: hidden;
 }
 
 
@@ -186,4 +187,48 @@ form label h4 {
 
 #flip-container button:hover {
     box-shadow: 10px 20px 30px #000;
+}
+
+
+/*FOOTER*/
+
+footer {
+    height: 7vh;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    line-height: 7vh;
+    display: none;
+    grid-template-areas: ". name social-media";
+}
+
+footer span {
+    grid-area: name;
+    margin-left: 9vw;
+    letter-spacing: 1px;
+}
+
+footer div {
+    grid-area: social-media;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer a {
+    margin: 0 2vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+footer a:hover i {
+    color: var(--secondry-color)
+}
+
+#social-media i {
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
 }

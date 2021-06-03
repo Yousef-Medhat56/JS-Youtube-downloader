@@ -4,6 +4,7 @@
 const videoUrlForm = document.getElementById("video-url-form") //form tag
 const frontSide = document.getElementById("front-side") //the front side that contain the input field and submit button
 const backSide = document.getElementById("back-side") //The back side that will contain the video details
+const reloadBtn = document.getElementById("reload-btn") //reload page button
 
 /*video duration value in the API is in seconds only,
 so this function convert video duration into seconds, minutes and hours */
@@ -46,6 +47,7 @@ const modifyBackSide = (videoInfo) => {
             backSide.style.height = "150px" //increase back side height
             backSide.style.marginBottom = "-100px" // add margin bottom
             videoUrlForm.style.margin = "22vh 0 10vh" //decrease the form margin 
+            reloadBtn.style.display = "inline-block" //show the reload page button
             showVideoInfo(videoInfo) //show video details in the back side
 
         }, 900) //0.9s = transition duration of the backside

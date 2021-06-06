@@ -33,6 +33,7 @@
 </head>
 
 <body>
+
     <!--Nav bar-->
     <nav>
         <!--reload the page after clicking the nav bar-->
@@ -40,73 +41,75 @@
         <!--Logo-->
         <h2>YouTube Downloader <i class="fas fa-arrow-alt-circle-down"></i></h2></button>
     </nav>
-
-    <!--make input field for the youtube video link-->
-    <form id="video-url-form">
-        <label for="video-url-input">
+    <section id="main-container">
+        <!--make input field for the youtube video link-->
+        <main id="main">
+            <header>
                 <h3>Convert and download</h3>
                 <h4>any YouTube video in MP4, MP3, webm and opus</h4>
-        </label>
-        <div id="flip-container">
-            <!--the side that contains video details-->
-            <div id="back-side"></div>
+            </header>
+            <div id="flip-container">
+                <!--the side that contains video details-->
+                <div id="back-side"></div>
 
-            <!--where the user will input the video url and click submit button-->
-            <div id="front-side">
-                <!--The error message that will appear for the user, if he entered wrong url-->
-                <h5 id="error-message"></h5>
+                <!--where the user will input the video url and click submit button-->
+                <div id="front-side">
+                    <!--The error message that will appear for the user, if he entered wrong url-->
+                    <h5 id="error-message"></h5>
 
-                <input type="text" id="video-url-input" placeholder="Enter video link">
-                <button type="submit" id="video-url-btn"> Convert</button>
-                <!--add loader that will appear after clicking the button-->
-                <div id="loader"></div>
+                    <input type="text" id="video-url-input" placeholder="Enter video link">
+                    <button type="submit" id="video-url-btn"> Convert</button>
+                    <!--add loader that will appear after clicking the button-->
+                    <div id="loader"></div>
+                </div>
+
             </div>
+        </main>
 
-        </div>
         <!--reload the page after clicking the button-->
-        <button onclick="location.reload()" type="button" id="reload-btn"><i class="fas fa-redo"></i> convert again</button>
-    </form>
+        <div><button onclick="location.reload()" type="button" id="reload-btn"><i class="fas fa-redo"></i> convert again</button></div>
+        <!--available formats for downloading-->
+        <section id="available-formats-container">
 
-    <!--available formats for downloading-->
-    <section id="available-formats-container">
+            <!--download video and audio together-->
+            <section id="video-audio-formats">
+                <header>
+                    <h3>Video and Audio</h3>
+                </header>
 
-        <!--download video and audio together-->
-        <section id="video-audio-formats">
-            <header>
-                <h3>Video and Audio</h3>
-            </header>
+            </section>
+
+            <!--download video only-->
+            <section id="video-only-formats">
+                <header>
+                    <h3>Video only</h3>
+                </header>
+
+            </section>
+
+            <!--download audio only-->
+            <section id="audio-only-formats">
+                <header>
+                    <h3>Audio only</h3>
+                </header>
+
+            </section>
 
         </section>
-
-        <!--download video only-->
-        <section id="video-only-formats">
-            <header>
-                <h3>Video only</h3>
-            </header>
-
-        </section>
-
-        <!--download audio only-->
-        <section id="audio-only-formats">
-            <header>
-                <h3>Audio only</h3>
-            </header>
-
-        </section>
-
+        <!--footer-->
+        <footer id="footer">
+            <div></div>
+            <span>&copy;2021 Yousef Medhat</span>
+            <!--social media accounts-->
+            <div id="social-media">
+                <a href="https://www.instagram.com/yousef_medhat56/" id="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Yousef-Medhat56" id="github">
+                    <i class="fab fa-github"></i></a>
+            </div>
+        </footer>
     </section>
-    <!--footer-->
-    <footer id="footer">
-        <span>&copy;2021 Yousef Medhat</span>
-        <!--social media accounts-->
-        <div id="social-media">
-            <a href="https://www.instagram.com/yousef_medhat56/" id="instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://github.com/Yousef-Medhat56" id="github">
-                <i class="fab fa-github"></i></a>
-        </div>
-    </footer>
 </body>
 
 <!--JavaScript-->

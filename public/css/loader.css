@@ -13,7 +13,12 @@
     border: 3px solid var(--border-color);
     border-top: 3px solid #fff;
     margin: auto;
-    animation: spin 1s linear infinite
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 
@@ -22,9 +27,17 @@
 @keyframes spin {
     from {
         transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
     }
 }
 
@@ -33,10 +46,9 @@
 
 #reload-btn {
     background-color: var(--secondry-color);
-    position: absolute;
-    display: none;
     border: none;
     outline: none;
+    display: none;
     padding: 2vh 1vw;
     border-radius: 5px;
     cursor: pointer;
@@ -45,4 +57,5 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.1);
+    margin-bottom: 5vh;
 }

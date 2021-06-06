@@ -29,13 +29,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10vh;
     z-index: 1;
 }
 
 nav button {
     width: 100%;
-    height: 100%;
+    min-height: 9vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,62 +51,78 @@ nav h2 {
 }
 
 
-/*Form tag */
+/*all components container except the nav bar*/
 
-form {
-    height: 25vh;
+#main-container {
+    width: 100%;
+    min-height: 91vh;
+    margin-top: 9vh;
     display: flex;
-    text-align: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 30vh 0 20vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/*header tag */
+
+header {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+header h3 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+header h4 {
+    font-size: 0.8rem;
+    font-weight: 250;
+    letter-spacing: 2px;
+}
+
+main {
+    margin: 15vh auto 0;
     line-height: 35px;
     transition: 0.8s ease;
     -webkit-transition: 0.8s ease;
     -moz-transition: 0.8s ease;
     -ms-transition: 0.8s ease;
     -o-transition: 0.8s ease;
-    position: relative;
 }
-
-
-/*label tag */
-
-form label h3 {
-    font-size: 1.4em;
-    letter-spacing: 1px;
-}
-
-form label h4 {
-    font-size: 1em;
-    font-weight: 250;
-    letter-spacing: 2px;
-}
-
-
-/*search bar (div) */
 
 #flip-container {
     position: relative;
-    margin-top: 2vh;
-    padding-top: 5vh;
-    width: 70%;
+    margin: 1vh auto 0;
+    width: 100%;
+    transform-style: preserve-3d;
 }
 
 #front-side,
 #back-side {
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.1);
     transition: all 0.8s ease;
     -webkit-transition: all 0.8s ease;
     -moz-transition: all 0.8s ease;
     -ms-transition: all 0.8s ease;
     -o-transition: all 0.8s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 #front-side {
-    backface-visibility: hidden;
     transform: perspective(2000px) rotateY(0deg);
     display: flex;
     align-items: center;
@@ -116,33 +131,6 @@ form label h4 {
     -moz-transform: perspective(2000px) rotateY(0deg);
     -ms-transform: perspective(2000px) rotateY(0deg);
     -o-transform: perspective(2000px) rotateY(0deg);
-    -webkit-backface-visibility: hidden;
-}
-
-
-/*error message*/
-
-#error-message {
-    position: absolute;
-    display: none;
-    bottom: -45px;
-    left: 30px;
-    letter-spacing: 1px;
-    color: var(--secondry-color);
-    animation: error 4s ease 1;
-    -webkit-animation: error 4s ease 1;
-}
-
-
-/*error message animation*/
-
-@keyframes error {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
 }
 
 
@@ -172,7 +160,6 @@ form label h4 {
 #flip-container button,
 #loader {
     width: 20%;
-    height: 100%;
     background-color: var(--secondry-color);
     cursor: pointer;
     border: none;
@@ -190,26 +177,51 @@ form label h4 {
 }
 
 
+/*error message*/
+
+#error-message {
+    position: absolute;
+    display: none;
+    bottom: -45px;
+    left: 30px;
+    letter-spacing: 1px;
+    color: var(--secondry-color);
+    animation: error 4s ease 1;
+    -webkit-animation: error 4s ease 1;
+}
+
+
+/*error message animation*/
+
+@keyframes error {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
 /*FOOTER*/
 
 footer {
-    height: 7vh;
+    min-height: 7vh;
     width: 100%;
     background-color: #1e1e1e;
     text-align: center;
-    line-height: 7vh;
-    display: none;
-    grid-template-areas: ". name social-media";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer span {
-    grid-area: name;
-    margin-left: 9vw;
+    display: block;
+    margin-left: 8vw;
     letter-spacing: 1px;
 }
 
 footer div {
-    grid-area: social-media;
     display: flex;
     justify-content: flex-end;
 }

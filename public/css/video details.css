@@ -5,12 +5,9 @@
     align-items: center;
     justify-content: space-around;
     text-align: left;
-    position: absolute;
     transform: perspective(2000px) rotateY(-180deg);
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.1);
     letter-spacing: 1px;
+    max-height: 150px;
 }
 
 

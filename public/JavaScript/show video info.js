@@ -1,7 +1,7 @@
 //show the video details for the user after fetching it
 
 //DOM elements
-const videoUrlForm = document.getElementById("video-url-form") //form tag
+const mainTag = document.getElementById("main") //main tag
 const frontSide = document.getElementById("front-side") //the front side that contain the input field and submit button
 const backSide = document.getElementById("back-side") //The back side that will contain the video details
 const reloadBtn = document.getElementById("reload-btn") //reload page button
@@ -37,17 +37,17 @@ const showVidDuration = (videoDuration) => {
 const rotateSides = () => {
     frontSide.style.transform = "perspective(2000px) rotateY(180deg)" //rotate front side
     backSide.style.transform = "perspective(2000px) rotateY(0deg)" //rotate back side
-    frontSide.style.visibility = "hidden" //hide front side
-
 }
 
 //add new styles to the back side (video details container) after its rotation
 const modifyBackSide = (videoInfo) => {
     setTimeout(() => { //wait until the backside rotate, then invoke the function
             backSide.style.height = "150px" //increase back side height
-            backSide.style.marginBottom = "-100px" // add margin bottom
-            videoUrlForm.style.margin = "22vh 0 10vh" //decrease the form margin 
-            reloadBtn.style.display = "inline-block" //show the reload page button
+
+
+
+            mainTag.style.margin = "10vh 0 5vh" //decrease the form margin 
+
             showVideoInfo(videoInfo) //show video details in the back side
 
         }, 900) //0.9s = transition duration of the backside
@@ -56,6 +56,10 @@ const modifyBackSide = (videoInfo) => {
 //write the video details 
 const showVideoInfo = (videoInfo) => {
     setTimeout(() => {
+            frontSide.style.display = "none" //remove front side
+            document.getElementById("flip-container").style.height = "150px" //increase the flip container height 
+            document.getElementById("reload-btn").style.display = "block" //show reload button
+
             /*wait the backside styles in (modifyBackSide) function, 
                    then invoke the function (write the video details in the back side)*/
 
@@ -76,7 +80,7 @@ const showVideoInfo = (videoInfo) => {
 
 
             //increase height of the main formats container
-            formatsContainer.style.height = "160vh"
+            formatsContainer.style.height = "fit-content"
 
 
             //show available formats for downloading
@@ -87,9 +91,6 @@ const showVideoInfo = (videoInfo) => {
             showAvailableFormats(vidAndAud, 0, `${videoTitle}`) //formats that have video and audio together
             showAvailableFormats(vidOnly, 1, `${videoTitle}`) //formats that have video only
             showAvailableFormats(audOnly, 2, `${videoTitle}`, addAudFormat) //formats that have audio only
-            showFooter() //show the footer after showing the available formats container
+
         }, 900) //0.9s = transition duration of the backside
 }
-
-//show the footer after showing the available formats container
-const showFooter = () => setTimeout(() => document.getElementById("footer").style.display = "grid", 900)

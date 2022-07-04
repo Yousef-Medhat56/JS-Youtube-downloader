@@ -9,10 +9,10 @@ const contentDisposition = require('content-disposition')
 
 
 //import getVideoInfo function
-const getVideoInfo = require("./Server/get video info")
+const getVideoInfo = require("Server/get video info")
 
 //import downloadVid function
-const downloadVid = require("./Server/download video")
+const downloadVid = require("Server/download video")
 
 //add port 
 const PORT = process.env.PORT || 7777
